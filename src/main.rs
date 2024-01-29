@@ -14,11 +14,11 @@ fn main() {
 
     change(&mut s);
     println!("{}", s);
-    // let r1 = &mut s;
-    // let r2 = &mut s;
-    //
-    // println!("{}, {}", r1, r2);
-  /*  {
+    let r1 = &s;
+    let r2 = &s;
+
+    println!("{}, {}", r1, r2);
+    /*  {
         let r1 = &mut s;
         println!("{}", r1);
     }
@@ -32,8 +32,7 @@ fn main() {
     let r3 = &mut s; // no problem
     println!("{}", r3);
     let reference_to_nothing = dangle();
-    println!("{}",reference_to_nothing);
-
+    println!("{}", reference_to_nothing);
 }
 
 fn change(some_string: &mut String) {
